@@ -636,31 +636,6 @@ How to estimate before running the particle filter (for `\(p\neq 0\)`)?
 
 
 ---
-class: list-space
-
-## Sketch of proof
-
-👉 New twisting functions decomposed as `\(\omega_p = \psi_p \cdot \phi_p\)`,
-
-`\(\phi_p\)` is "residual"
-
-Two nice properties
-
-- `\((\hat\gamma_{p-1}^{\psi})^\phi = \hat\gamma_{p-1}^{\psi\cdot\phi}\)`
-- `\(\hat\gamma_{p-1}^\phi(\text{d} x_{p-1}) = \hat{\gamma}_{p-1}(\text{d} x_{p-1}) M_{p}(\phi_{p})(x_{p-1})\)`
-
-
---
-Yields
-
-- `\(\hat{\gamma}_{p-1}^{\omega}(\text{d} x_{p-1}) = \hat{\gamma}_{p-1}^{\psi}(\text{d} x_{p-1}) M_{p}^{\psi}(\phi_{p})(x_{p-1})\)`
-
-
---
-Use to express `\(\hat{\eta}_{p-1}^{\omega}(M_p(\omega_p))\)` without `\(\omega\)`-twisting then some algebra
-
-
----
 
 ## Particle filter variance with random weights
 
@@ -683,28 +658,6 @@ and `\(s_n(x_n) = 1\)`
 
 ---
 
-
-## Rough sketch of proof
-
-- Define `\((\tilde{M}_{0:n}, \tilde{G}_{0:n})\)`, equivalent FK model on augmented state-space `\((X_p, U_p)\)` to represent `\((M_{0:n}, \bar G_{0:n})\)`
-
-- In general, the asymptotic variance is
-
-`$$\sigma^2_n(\varphi) = \sum_{p=0}^{n} v_{p,n}(\varphi),\quad \text{where}\quad 
-v_{p,n}(\varphi) = \frac{\gamma_p(1)\gamma_p\left(Q_{p,n}(\varphi)^2\right)}{\gamma_n(1)^2} - \eta_{n}(\varphi)^2$$`
-
-- Relate `\(\tilde{Q}_{p,n}\)` to `\(Q_{p,n}\)` using `\(\tilde{G}_p(x_p,u_p) / G_p(x_p)\)`
-
-- Then relate `\(\tilde{\gamma}_p\left(\tilde{Q}_{p,n}(\varphi)^2\right)\)` to `\(\gamma_p\left(Q_{p,n}(\varphi)^2\right)\)` using `\(s_p(x_p) = \mathbb{E}[\tilde{G}_p(x_p, U_p)/G_p(x_p)]^2\)`.
-
---
-
-&lt;br&gt;&lt;br&gt;
-❗ Effect of using estimate is isolated, does not compound (asymptotically)
-
-
----
-
 ## Uniform bound
 
 **Setup**: Let `\(\sigma_n^{2}(\varphi)\)` be the asymptotic variance of `\(\gamma_n^{N}(\varphi)/\gamma_n(1)\)` for bounded `\(\varphi\)`.
@@ -713,9 +666,7 @@ For bounded `\(\varphi\)`, the asymptotic variance of `\(\bar\gamma_n^{N}(\varph
 
 `$$\bar\sigma_n^{2}(\varphi) = \sum_{p=0}^n \bar{v}_{p,n}(\varphi)$$`
 
-
 --
-
 .content-box-red[
 **Prop**: If, for some `\(0 &lt; C &lt; \infty\)`, 
 `$$\sup_{p \in [0:n]}\sup_{x_p \in \mathsf{X}}s_p(x_p) \leq C+1$$`
