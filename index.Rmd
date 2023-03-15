@@ -474,7 +474,7 @@ $$(\eta_0^\psi)^N \overset{G_0^\psi}{\longrightarrow} (\hat\eta_0^\psi)^N \overs
 ]
 
 ---
-class: list-space
+class: hide-logo
 
 .pull-left[
 **Base**
