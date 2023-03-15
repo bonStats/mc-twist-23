@@ -997,6 +997,7 @@ class: list-space
    - Pseudo-marginal MCMC
    - New models  
    - Recommendations for when to use
+   - Automatic local tempering of twisting function
 
 --
 - Arxiv: https://arxiv.org/abs/2208.04288
