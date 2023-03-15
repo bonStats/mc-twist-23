@@ -957,3 +957,9 @@ class: list-space
 class: inverse, center, middle, hide-logo
 
 ## Thank you for listening `r emo::ji("tornado")`
+
+---
+class: hide-logo
+.center[
+![](imgs/Party-Cool.png)
+]
