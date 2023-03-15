@@ -47,7 +47,7 @@ d_plot <- ggplot() + ggdist::stat_slab(aes(y = name, dist = dist), data = d_df) 
   ggdist::stat_slab(aes(y = "M", dist = kerdist), fill = NA, colour = "blue", normalize = "all", linetype = "dashed") + 
   theme_bw() +
   scale_y_discrete(limits = rev) +
-  scale_x_continuous(limits = c(-12.5,12.5)) +
+  scale_x_continuous(limits = c(-13,13)) +
   theme(axis.title.x=element_blank(),
         axis.text.x=element_blank(),
         axis.ticks.x=element_blank()) +

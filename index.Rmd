@@ -3,7 +3,7 @@ title: "Monte Carlo twisting for particle filters"
 subtitle: ""
 author: "Joshua J Bon"
 institute: "Queensland University of Technology"
-date: "CoSInES x Bayes4Health Seminar, Nov '22"
+date: "BayesComp '23"
 output:
   xaringan::moon_reader:
     css: ["default", "default-fonts", "hygge", "bon-qut-campus-title.css"] #css: ["default", "default-fonts", "hygge"] #
@@ -297,7 +297,7 @@ class: list-space
 ## Feynman-Kac model (for 1 step)
 
 .pull-left[
-```{r fk-viz-1, echo = F}
+```{r fk-viz-1, echo = F, warning=FALSE}
 
 d_plot + theme(text = element_text(size = 20))
 
@@ -323,7 +323,7 @@ class: list-space
 ## Particle filter (for 1 step)
 
 .pull-left[
-```{r fk-viz-2-1, echo = F}
+```{r fk-viz-2-1, echo = F, warning=FALSE}
 
 d_plot + 
   ggdist::stat_dots(aes(y = name, dist = dist), data = s_df, colour = "black", fill = "black") + 
@@ -479,7 +479,7 @@ class: list-space
 .pull-left[
 **Base**
 
-```{r fk-viz-2-1-2, echo = F}
+```{r fk-viz-2-1-2, echo = F, warning=F}
 
 d_plot + 
   ggdist::stat_dots(aes(y = name, dist = dist), data = s_df, colour = "black", fill = "black") + 
@@ -490,7 +490,7 @@ d_plot +
 .pull-right[
 **Twisted**
 
-```{r fk-viz-2-tw-2, echo = F}
+```{r fk-viz-2-tw-2, echo = F, warning =F}
 
 ds_t_plot + theme(text = element_text(size = 19))
 
