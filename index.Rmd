@@ -3,7 +3,7 @@ title: "Monte Carlo twisting for particle filters"
 subtitle: ""
 author: "Joshua J Bon"
 institute: "Queensland University of Technology"
-date: "BayesComp '23"
+date: "SMC Down Under '23"
 output:
   xaringan::moon_reader:
     css: ["default", "default-fonts", "hygge", "bon-qut-campus-title.css"] #css: ["default", "default-fonts", "hygge"] #
@@ -182,7 +182,7 @@ Paper
 .pull-right[
 
 ```{r, snow-bike, echo=FALSE, out.height="550"}
-knitr::include_graphics("imgs/snow-bike.JPG")
+knitr::include_graphics("imgs/rail-trail.jpg")
 ```
 
 
